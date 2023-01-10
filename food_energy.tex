@@ -12,7 +12,7 @@
 \newcommand{\ee}{\end{equation}}
 \newcommand{\bea}{\begin{eqnarray}}
 \newcommand{\eea}{\end{eqnarray}}
-\newcommand{\degC}{C^{\circ}}
+\newcommand{\degC}{^{\circ}C}
 \begin{document}
 \title[How many acres of potatoes does a society need?]{How many acres of potatoes does a society need?}
 \author{N T Moore}
@@ -29,11 +29,11 @@ Science and Social Policy classes are full of bespoke units and involve many dif
 \maketitle
 
 \section{Introduction}
-When the United States entered World War One one of the problems they faced was logistics.  How much food do you need to ship overseas to Europe to feed a million soldiers?  That early work in nutrition led to the 3000 Calorie diet many people remember from secondary Health Education class.  A bit about units you might remeber: $1~Calorie = 1~kilo-calorie~(kcal)$, and a dietician might build a 3000 kcal diet for a 20 year old basketball player.  A \textit{calorie} is the amount of energy it takes  to heat a gram of water by a degree Celsius.  There are about 4.2 Joules in a single calorie, and a Joule occurs all over introductory  physics.  If you need to buy a new home furnace, the sales brochure might advertise that it is capable of delivering 100,000 BTU's of heat each hour.  What's a BTU? Heat a pound of water by $1^{\circ}F$.  Of course Heat Pumps are far more efficient than simply burning methane or propane, but they consume kilo-watt-hours (kWh) of electricity, not BTU's.  What's a kWh?  Run a 1000 Watt toaster for an hour and you'll have pulled one kWh off the grid, it will cost you about \$0.13 in Minnesota.  If you decide to put solar panels in your backyard, they will probably collect about $10\%$ of the 3.5kWh the  the sun delivers to each square meter of your lawn (in Minnesota) each day.  
+When the United States entered World War One one of the problems they faced was logistics.  How much food do you need to ship overseas to Europe to feed a million soldiers?  That early work in nutrition led to the 3000 Calorie diet many people remember from secondary Health Education class.  A bit about units you might remeber: $1~Calorie = 1~kilo-calorie~(kcal)$, and a dietician might build a $3000 kcal$ diet for a 20 year old basketball player.  A \textit{calorie} is the amount of energy it takes  to heat a gram of water by a degree Celsius.  There are about 4.2 Joules in a single calorie, and a Joule occurs all over introductory  physics.  If you need to buy a new home furnace, the sales brochure might advertise that it is capable of delivering 100,000 BTU's of heat each hour.  What's a BTU? Heat a pound of water by $1^{\circ}F$.  Of course Heat Pumps are far more efficient than simply burning methane or propane, but they consume kilo-watt-hours (kWh) of electricity, not BTU's.  What's a kWh?  Run a 1000 Watt toaster for an hour and you'll have pulled one kWh off the grid, it will cost you about \$0.13 in Minnesota.  If you decide to put solar panels in your backyard, they will probably collect about $10\%$ of the 3.5kWh the  the sun delivers to each square meter of your lawn (in Minnesota) each day.  
 
 As the previous paragraph illustrates, there are a frustratingly large number of different units in an ``Energy'' class.  At Winona State, this 3 credit class fulfulls a ``Science and Social Policy'' general education requirement and is taken by students from across the university.   Lots of college majors don't require a math class beyond algebra or introductory statistics and the population is largely math-averse. You could jokingly say that one of the main things students learn in the class is unit converstion, but it isn't far off.  Nearly every field finds energy a useful representation, and every profession has their own set of units and terminology that's most well suited for quick calculation.  Would a medical lab scientist talk about the fractional acre-foot of urine needed test kidney function?  No, but someone in the central valley of California would certianly care about the acre-feet of water necessary to grow almonds!  Does a gas station price their gasoline in dollars per kWh? Given the growing electrification of cars, they might soon.
 
-Everyone eats, maybe not 3000 kcals per day, but at least something every day.  When I teach our energy class, I spend a few weeks talking about food energy before all other types.  While food production is not central to climate change and wars over oil, food is essential in a way that diesel and gasoline are not.  Vehicle fuel makes modern life possible, but we could live, unpleasantly, without it.  We can't live without fats and protein.  
+Everyone eats, maybe not $3000 kcals$ per day, but at least something every day.  When I teach our energy class, I spend a few weeks talking about food energy before all other types.  While food production is not central to climate change and wars over oil, food is essential in a way that diesel and gasoline are not.  Vehicle fuel makes modern life possible, but we could live, unpleasantly, without it.  We can't live without fats and protein.  
 
 \section{Food Energy}
 
@@ -44,32 +44,32 @@ Planning to save money, one college student decides to go to an all-you-can-eat 
 Useful information: the student has a mass of 80kg and is made mostly of water.  A Calorie heats 1 kg of water $1^{\circ}C$. 
 
 Here's a possible answer:
-equate food energy with calorimetric heating and assume human bodies have the same heat capacity as water, about $1kcal/kg\cdot\degC$. This allows us to calculate the body's temperature increase.
+equate food energy with calorimetric heating and assume human bodies have the same heat capacity as water, about $1\frac{kcal}{kg\cdot\degC}$. This allows us to calculate the body's temperature increase.
 \bea
 3000kcals &=& 80kg\cdot1 \frac{kcal}{kg\cdot \degC}\cdot\Delta T\\
 \Delta T &\approx& +37.5\degC
 \eea
 Students are normally quite surprised at this number.  Although wildly unrealistic, $\Delta T \approx +6\degC$ is typicaly fatal, there is a related phenomena of diet-induced thermogenesis\cite{meat_sweats} known informally as ``the meat sweats''. Some students connect this calculation to feeling quite hungry after a cold swim in the pool (a similar effect).  On a larger scale, discussing what's wrong with this estimate is useful.  The main storage mechanism for storing food energy is fat tissue, which the calculation completely ignores.  Infants are generally born with little fat, and an infant sleeping through the night often coincides with the baby growing enough fat tissue to store sufficient kcals to make it though a night without waking up ravenously hungry.  A related follow-up is that if a person is stranded in the wilderness, they should immediately start walking downstream (ie, towards civilization) as they likely won't be able to harvest an amount of kcals equivalent to what they already have stored on their hips and abdomen.\cite{trout}  The contrast of bear hibernation \cite{fat_bear} and songbirds constatly eating through the winter are related connections to investigate.
 
-\subsection{Biophysical Power}: 
+\subsection{Biophysical Power}
 A more realistic question to follow up with relates to the average \textit{power} given off by a person over a day.  
-Again, assuming 3000kcal is burned over 24 hours, with useful information: $1 kcal \approx 4200J$ and $1 J/s=1W$.
+Again, assuming $3000kcal$ is burned over $24 hours$, with useful information: $1 kcal \approx 4200J$ and $1 J/s=1W$.
 \be
-\frac{3000kcal}{24hours}\frac{4200J}{1kcal}\frac{1hour}{3600sec}\approx145W
+\frac{3000kcal}{24hours}\cdot\frac{4200J}{1kcal}\cdot\frac{1hour}{3600sec}\approx145W
 \ee
 Most students still remember $75Watt$ lightbulbs, but given the spread of LED lighting, ``A person's body heat is two 75W light bulbs'' will probably only make sense for a few more years.  Desert or cold-weather camping, alone versus with friends, and survival swimming are also examples for students to make sense of this answer.  If you can take advantage of other people's waste body heat, you'll sleep more pleasantly and survive longer in cold water.  
 
-Another connection to make is that of ``brown fat,'' a sort of biological space heater that humans and other mammals develop in response to cold weather.  This tissue's mitochondria can burn lipids and carbohydrates in a useless proton pumping scheme, which produces metabolic heat \cite{Brown_fat}.  Most common in rodents and infants, this mechanism can be stimulated by extended exposure to cold temperatures.  The idea of a biological space heater that takes a month to turn on and a month to turn off matches the lived experience of college students in Minnesota, who wear down jackets in $4\degC$ weather in November, and beachwear in the same $4\degC$ weather in March.  Additionally, transplants to northern climates often take a few years to ``get used to'' the colder weather up north. It seams just as easy to say that transplants' bodies take a few years to develop the brown fat cells which allow them to be comfortable in cold weather.
+Another application to discuss is that of ``brown fat,'' a sort of biological space heater that humans and other mammals develop in response to cold weather.  This tissue's mitochondria can burn lipids and carbohydrates in a useless proton pumping scheme, which produces metabolic heat \cite{brown_fat}.  Most common in rodents and infants, this mechanism can be stimulated by extended exposure to cold temperatures.  The idea of a biological space heater that takes a month to turn on and a month to turn off matches the lived experience of college students in Minnesota, who wear down jackets in $4\degC$ weather in November, and beachwear in the same $4\degC$ weather in March.  Additionally, transplants to northern climates often take a few years to ``get used to'' the colder weather up north. It seams just as easy to say that transplants' bodies take a few years to develop the brown fat cells which allow them to be comfortable in cold weather.
 
-One other connection to emphasize at this question is the difference between power and energy.  A graph of a human body's ``kcal content'' over the course of a day can be a useful illustration.  When sedentary, this graph probably has the slope of $-150W\approx 125kcals/hour$.  If the $3000kcal$ meal at the buffet takes an hour, this period corresponds to an energy-time slope of $+3000kcal/hour\approx +3500W$.  
+One other distinction to emphasize is the difference between power and energy.  A graph of a human body's ``kcal content'' over the course of a day can be a useful illustration.  When sedentary, this graph probably has the slope of $-150W\approx -125 \frac{kcals}{hour}$.  If the $3000kcal$ meal at the buffet takes an hour, this period corresponds to an energy-time slope of $+3000\frac{kcal}{hour}\approx +3500W$.  
 
-In medicine, these slopes are related to ``Metabolic Equivalent of Task'' (METS) and are commonly discussed in cariology and exercise physiology.  METS is power normalized by mass, $1METS=1\frac{kcal}{kg\cdot hour}$ and common METS levels are available for many different physcial activities. \cite{METS}
+In medicine, these slopes are related to ``Metabolic Equivalent of Task'' (METS) and are commonly discussed in cariology and exercise physiology.  METS is power normalized by mass, $1METS=1\frac{kcal}{kg\cdot hour}$, and METS levels are available for many different physcial activities. \cite{METS}
 
+\subsection{Burning off food energy}
+Imagine that after eating a $600~kcal$ bacon-maple long-john (donut), you decide to go for a hike to ``work off'' the Calories.  Winona State  is in a river valley bounded by $200m$ tall bluffs.  How high up the bluff would you have to hike to burn off the donut?  
+Useful information: human muscle is about $1/3$ efficient and on Earth's surface gravitational energy has a slope of about $10~\frac{Joules}{kg\cdot m}$.
 
-Imagine that after eating a $600~kcal$ bacon maple long-john (donut), you decide to go for a hike to work off the Calories.  Winona State  is in a river valley bounded by 200m tall bluffs.  How high up the bluff would you have to hike to burn off the donut?  
-Useful information: human muscle is about $30\%$ efficient and gravitational energy on Earth's surface has a slope of about $10~Joules/kg\cdot m$.
-
-Answer
+One way to approach this problem is by using Energy Bar Charts \cite{energy_bar_charts} to illustrate how the food energy can change form as it is absorbed and used.    
 Energy bar charts
 \bea
 \frac{1}{3}\cdot600kcal\cdot\frac{4200J}{1kcal} 
@@ -131,10 +131,10 @@ https://doi.org/10.1016/B0-12-227055-X/01188-3.
 (https://www.sciencedirect.com/science/article/pii/B012227055X011883)
 
 \bibitem{trout}
-The wilderness river might be full of trout, but if they're 300kcals each, you'll have to catch, clean, and smoke $10$ of them to store up a day's food. \url{https://fdc.nal.usda.gov/fdc-app.html#/food-details/175154/nutrients}
+The wilderness river might be full of trout, but if they're $300kcals$ each, you'll have to catch, clean, and smoke $10$ of them to store up a day's food. \url{https://fdc.nal.usda.gov/fdc-app.html#/food-details/175154/nutrients}
 
 \bibitem{fat_bear}
-Some sources claim that bear metabolism can vary between 4000 to and 20,000 kcals per day, \url{https://bear.org/5-stages-of-activity-and-hibernation/}, comically illustrated by the National Park Service at \url{https://www.nps.gov/katm/learn/fat-bear-week-2022.htm} .
+Some sources claim that bear metabolism can vary between $4,000$ to $20,000$ kcals per day, \url{https://bear.org/5-stages-of-activity-and-hibernation/}, comically illustrated by the National Park Service at \url{https://www.nps.gov/katm/learn/fat-bear-week-2022.htm} .
   
 \bibitem{brown_fat}
 Huttunen P, Hirvonen J, Kinnula V. The occurrence of brown adipose tissue in outdoor workers. Eur J Appl Physiol Occup Physiol. 1981;46(4):339-45. doi: 10.1007/BF00422121. PMID: 6266825.
@@ -154,8 +154,18 @@ Himms-Hagen J. Nonshivering thermogenesis. Brain Res Bull. 1984 Feb;12(2):151-60
 
 https://www.nih.gov/news-events/nih-research-matters/uncovering-origins-brown-fat
 
-\cite{METS}
+\bibitem{METS}
 Jetté M, Sidney K, Blümchen G. Metabolic equivalents (METS) in exercise testing, exercise prescription, and evaluation of functional capacity. Clin Cardiol. 1990 Aug;13(8):555-65. doi: 10.1002/clc.4960130809. PMID: 2204507.
+
+\bibitem{energy_bar_charts}
+something from AMTA?
+
+Energy as a substancelike quantity that flows: Theoretical considerations
+and pedagogical consequences
+Eric Brewe
+PHYSICAL REVIEW SPECIAL TOPICS - PHYSICS EDUCATION RESEARCH 7, 020106 (2011)
+https://journals.aps.org/prper/abstract/10.1103/PhysRevSTPER.7.020106
+
 
 \bibitem{Aztec_Cannibalism} for crop productivity
 
