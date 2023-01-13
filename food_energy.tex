@@ -103,7 +103,8 @@ As figure \ref{ag_yields} shows, the epoch of ``Better Living Through Chemistry'
 USDA yields over time
 The data plotted comes from the USDA
 \url{https://www.nass.usda.gov/Statistics_by_Subject/index.php}
-The idea for this plot came from an online blog, \cite{math_encounters}
+The idea for this plot came from an online blog, \cite{math_encounters}.  
+Details for recreating this plot are given in \ref{how_yield_plot_is_made}.
 }
 \label{ag_yields}
 \end{figure}
@@ -150,8 +151,47 @@ The work was prompted in part by discussions with John Deming, Carl Ferkinhoff, 
 %a simple heading of ‘Appendix’ use the code \section*{Appendix}. If it contains
 %numbered equations, figures or tables the command \appendix should precede it and
 %\setcounter{section}{1} must follow it
-%\appendix
-\%section{Introductory Food Energy Questions}
+\clearpage
+\appendix
+\section{Creating the historical kcal/acre figure from USDA data}
+\label{how_yield_plot_is_made}
+The United States Department of Agriculture (USDA) provides historical crop information via the National Agricultureal Statistics Service, \url{https://www.nass.usda.gov/Statistics_by_Subject/index.php?sector=CROPS}.  Data was downloaded in spreadsheet csv format and then combined and plotted via a Python Jupyter notebook.   
+
+Each crop has its own bespoke units, for example potatoes are sold by hundredweight (CWT) but sugar beets are measured by the ton.  
+Every imaginable agricultural product seems to be tracked in the NASS site, for example Maple Syrup production is tracked and given in gallons of syrup per (tree) tap! 
+Conversion factors used are summarized in Table \ref{conversions}.  
+Calorie (kcal) density for each crop was taken from \url{https://fdc.nal.usda.gov/fdc-app.html}.  Within this database, foods are identified by an FDC ID.  
+
+An example calculation (implemented in the Jupyter notebook) follows for Corn.  
+In 2022 the USDA reported an average production of 172.3 bushels of corn per acre of farmland.  
+\be
+172.3\frac{bu}{acre}\cdot\frac{56lbs~corn}{bu}\cdot\frac{453.592~grams}{lbs}\cdot\frac{365~kcal}{100~grams} = 15,974,657 \frac{kcal}{acre}
+\ee
+Obviously the result is only reasonable to two signifigant figures!
+%grams_per_lbs=453.592
+%corn_lbs_per_bu=(56.0/1.0)
+%corn_kcal_per_gram=(365/100)
+%corn_kcal_per_acre = corn_bu_per_acre*corn_lbs_per_bu*grams_per_lbs*corn_kcal_per_gram
+
+\begin{table}
+\caption{\label{label}
+A summary of units and conversions used to create figure \ref{ag_yields} from USDA NASS data.  $1cwt$ is a hundred pounds of potatoes.  A bushel, $1bu$, is a volume unit of about 35liters and corresponds to about 60lbs of grain. Calorie content per 100 gram mass of food is taken from the USDA's ``Food Data Central'' database. It isn't clear from any of these resources if lb is pound-force (lbf) or pound-mass (lbm) and so I am ignorantly treating them as ``grocery store units'' where $1 lbs = 453.592 grams$.
+}
+\begin{indented}
+\item[]\begin{tabular}{@{}lllll}
+\br
+Crop&per acre unit&production unit&kcals per 100gram &  FDC ID\\
+\mr
+Corn & bu/acre & $1bu=56lbs$ & 365 &170288 \\
+Potatoes & cwt/acre & $1CWT=100lbs$ & 77 & 170026 \\
+Soybeans & bu/acre & $1bu=60lbs$ & 446 & 174270 \\
+Sunflowers & lbs/acre & & 584 & 170562 \\
+Wheat & bu/acre & $1bu=60lbs$ & 327 & 168890 \\
+\br
+\end{tabular}
+\end{indented}
+\label{conversions}
+\end{table}
 
 
 
