@@ -94,33 +94,58 @@ The point of these energy conversion calculations is not to give students an eat
 One feature of the aught's ``homesteading'' culture \cite{homesteading} is the idea that a person should probably be able to move to the country, eat a lot of peaches, and grow all their own food.  Learning that farming labor is \textit{skilled} labor can be a brutal and disheartening realization. Eating $3000kcals$ each day means planting, weeding, harvesting, and storing more than a million kcals each year \cite{Haspel}.  Where will those Calories come from? Is your backyard enough to homestead in the suburbs \cite{backyard_homestead}?
 
 At some point bewteen 1920 and 1950, US chemical manufacturers realized that in the post-war period, they could repurpose processes developed for manufacturing munitions and chemical warfare agents to produce chemicals that would kill insects and increase the nitrogen levels in the soil. 
-As figure \ref{ag_yields} shows, the epoch of ``Better Living Through Chemistry'' produced a dramatic increase in per-acre yields across all comodity food crops.  
+As figures \ref{corn_and_potato_yields} and \ref{ag_yields} show, the epoch of ``Better Living Through Chemistry'' produced a dramatic increase in per-acre yields across all comodity food crops, particularly corn and potatoes.  
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=\columnwidth]{yield_over_time.png}
+\includegraphics[width=\columnwidth]{corn_potatoes_raw_production_per_acre.pdf}
 \caption{
-USDA yields over time
-The data plotted comes from the USDA
-\url{https://www.nass.usda.gov/Statistics_by_Subject/index.php}
+USDA per acre Corn and Potato production figures, plotted over time.  Data is given in harvet units, $56lbs$ bushels per acre for field corn and hundred-weight (CWT) for potatoes.  By mass, corn is about $4.5$ times more calorie dense than potato which results in a nearly equal $kcal/acre$ values for both crops in figure \ref{ag_yields}.
+Details on the data source and conversions are given in \ref{how_yield_plot_is_made}.
+}
+\label{corn_and_potato_yields}
+\end{figure}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=\columnwidth]{kcal_per_acre_yields.pdf}
+\caption{
+USDA per acre crop production figures, plotted over time.  Production data is scaled by estimated dietary kcal content to show that, over all crops, there has been a dramatic increase in kcal production since about 1940.  
+Details of the data source and conversions are given in \ref{how_yield_plot_is_made}.
 The idea for this plot came from an online blog, \cite{math_encounters}.  
-Details for recreating this plot are given in \ref{how_yield_plot_is_made}.
+It would be interesting to know if there are patterns of scaling among vegetable families (grains, legumes, tubers, etc) in the same way that there are family classifications for the minimal energy required for transport \cite{energetic_cost_of_moving}.
 }
 \label{ag_yields}
 \end{figure}
 
-If you're discussing backyard Calorie production it isn't reasonable to use modern yield estimates for planning.  ``Roundup Ready'' Corn, Soybean, and Sugar Beet seeds are not available to the public, and the edge effects from deer and insects are much smaller on a $600$ acre field than they are in an community garden allotment.  As mentioned in the introduction, in 1917 the USDA published a pamphlet, shown in \ref{1917_yields} about yields a farmer might expect.  Their data came from pre-war, pre-chemical agriculture, and the yields cited were produced with horses, manure, lime, and large families full of children.  If you want to be self sufficient, these yield numbers are probably a good upper bound on what's realistically possible.  
+However, if you're discussing backyard Calorie production it isn't reasonable to use modern yield estimates for planning.  ``Roundup Ready'' Corn, Soybean, and Sugar Beet seeds are not available to the public, nobody wants to put on a respirator to apply Atrazine ten feet from the back door,  and the edge effects from deer and insects are much smaller on a $600$ acre field than they are in an community garden allotment.  As mentioned in the introduction, in 1917 the USDA published a pamphlet \cite{USDA_1917_yields_pamphlet} giving detailed Calorie estimates of farmer might expect from a given acre of crop.  A table from this pamphlet is shown in Figure \ref{1917_yields}.  
+The pamphlet data came from pre-war, pre-chemical agriculture, and the yields cited were produced with horses, manure, lime, and large families full of children.  If you want to be self sufficient, these yield numbers are probably a good upper bound on what's realistically possible by a dedicated luddite.  
+
+So, another question using this data.  If you want to feed your family of 4 potatoes, how much land will you need to cultivate?
+Here's an estimate: a family of 4 requires 3000kcal/person each day.  If we over-estimate and produce food for the entire year, the family will need about $4.4$ million kcals.
+\be
+\frac{4~people}{year}\cdot\frac{3000kcal}{person\cdot day}\cdot\frac{365~days}{year} \approx 4.4 M kcal 
+\ee
+A brief aside for those bored by the simplistic unit conversion: when I ask students to solve problems like these, one undercurrent of conversation I hear is ``Should I divide by 365 or multiply?''  Particularly with online homework systems, checking your answer for reasonability isn't typically graded, and asking the students to reason and convert proportionally, with units is a skill worth emphasizing. 
+
+From figure \ref{1917_yields} we can estimate 1.9 million kcals per acre of production.  Again the students might ask, should I multiple 4.4 and 1.9 or should I divide them.  It can be useful in a class discussion to have the students discuss and vote which of the following two forms will give the meaningful answer.
+\bea
+\frac{4.4 M kcal}{family}\cdot\frac{1 acre}{1.9M kcal}\\
+\frac{4.4 M kcal}{family}\cdot\frac{1.9M kcal}{1 acre}
+\eea
+This choice of operation is difficult to make without seeing the units present, which is again a learning opportunity for the students.
+
+What does the answer of $2.3$ acres mean?  The university's $91m\times49m$ football field has an area of about $1.1$ acres, so you could say that a football field of potatoes will probably feed a family through the winter.  
 
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=\columnwidth]{USDA_1917_cropped.pdf}
 \caption{
-USDA yields from pre-chemical US ag
+A table from a USDA published booklet giving 1917 yields for various farm products.  The amounts listed were almost certainly produced via only animal and human power with only manure and lime available as chemical soil amendments.  Accordingly, they are probably a reasonable upper bound on what's possible in a modern ``back to the land'' backyard garden.
 }
 \label{1917_yields}
 \end{figure}
 
-So, another question using this data.  If you want to feed your family of 4 potatoes, how much land will you need to cultivate?
 1917 data
 
 Grow your own food, possible?  
@@ -166,6 +191,7 @@ An example calculation (implemented in the Jupyter notebook) follows for Corn.
 In 2022 the USDA reported an average production of 172.3 bushels of corn per acre of farmland.  
 \be
 172.3\frac{bu}{acre}\cdot\frac{56lbs~corn}{bu}\cdot\frac{453.592~grams}{lbs}\cdot\frac{365~kcal}{100~grams} = 15,974,657 \frac{kcal}{acre}
+\label{example_calculation}
 \ee
 Obviously the result is only reasonable to two signifigant figures!
 %grams_per_lbs=453.592
@@ -193,6 +219,15 @@ Wheat & bu/acre & $1bu=60lbs$ & 327 & 168890 \\
 \label{conversions}
 \end{table}
 
+Raw data from the USDA NASS is plotted in figure \ref{raw_production_per_acre}.  The scaling described in equation \ref{example_calculation} produces figure \ref{ag_yields} earlier in the paper.
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=\columnwidth]{raw_production_per_acre.pdf}
+\caption{
+USDA yields from pre-chemical US ag
+}
+\label{raw_production_per_acre}
+\end{figure}
 
 
 \section*{References}
@@ -268,9 +303,18 @@ Mark Biegert
 Math Encounters 
 2017
 
+\bibitem{energetic_cost_of_moving}
+See the family groupings in figure 2 of 
+The Energetic Cost of Moving About
+V.A. Tucker
+American Scientist
+1975
+vol 63
+413-419
+
 \bibitem{Aztec_Cannibalism} for crop productivity
 
-\bibitem{USDA_1917_yields}
+\bibitem{USDA_1917_yields_pamphlet}
 
 \end{thebibliography}
 \end{document}
