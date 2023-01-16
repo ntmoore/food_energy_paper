@@ -180,9 +180,19 @@ Estimates of Tenochtitlan's population in 1500CE vary widely, from 40,000 \cite{
 
 Few if any Native American cultures made use of draft animals before the columbian exchange.  This means that the food that fed Tenochtitlan must have been brought to the city center by foot or canoe.  How much land must have been devoted to chinampas to feed the population, or conversely, how many people could be supported by the land within walking or paddling distance from the city center?
 
-look at map (wikipedia) of chinampas and compute area.  The ask what yield would produce sufficient corn - compare to 1917 data.  
+A 1964 paper in Scientific American \cite{Chinampas_1964} gives a general outline of the chinampas in the area of Tenochtitlan in 1500CE.  This map seems to be the basis for the similar figure in Wikipedia \cite{chinampas_wikipedia}.  Descriptions of chinampas agriculture indicate that as many as 7 successive crops could be grown and harvested from the same plot of soil each year, two of which could be maize (corn).  This is truly amazing productivity, given that in the midwestern United States corn is normally grown, at most, every other year because of it's extreme nutrient demands on the soil.
 
-or, assume 40bu/acre, compute area, and find radius
+There are many ways to approach this estimation problem.  We could assume a Tenochtitlan population of $100,000$ people has a $3000kcal/day$ diet that comes completely from corn.  Assuming that corn's density and nutrituional content haven't changed in the 5 centuries preceding the 1917 data in figure \ref{1917_yields}, we could assume $1lbs$ of corn contains $\approx1594kcal$ of food energy.  
+Looking at the map with ImageJ, it seems like the recorded area devoted to chinampas might be about
+$16,000~acres$ -- details are given in \ref{appx_imageJ}.
+With these assumptions, we could equate the corn energy production from chinampas with the population's yearly food need. Note, in this version of the story, the corn productivity, $P\frac{bu}{acre}$ is treated as an unknown variable.  
+\bea
+Food~production &=& 16,000acres\cdot \frac{2~corn~crops}{year}\cdot P \frac{bu~of~corn}{acre} \nonumber \\
+Population~requires &=& 100,000~people\cdot \frac{3000kcal}{person\cdot day}\cdot\frac{365days}{year}\cdot\frac{1lbs~corn}{1594kcal}\cdot\frac{1bu}{56lbs} \nonumber \\
+P \approx 38\frac{bu}{acre} && 
+\eea
+
+This crop productivity is in remarkable agreement with the 1917 USDA yields, $35bu/acre$, which seems to validate the assumed 100,000 person population of Tenochtitlan.  Some references \cite{Chinampas_1964} describe an extensive tribute system that Aztec government required of it's subjects, which certainly would have been necessary to support populations on the upper end of historical estimates \cite{400k}.
 
 \section{Example: Was the Irish Potato Famine a Natural Disaster?}
 
@@ -256,6 +266,30 @@ USDA yields from pre-chemical US ag
 }
 \label{raw_production_per_acre}
 \end{figure}
+
+
+\section{Estimating land area devoted to chinampas with ImageJ}
+\label{appx_imageJ}
+
+ImageJ is a free software program developed by the National Institue of Health for photo analysis, \cite{imageJ}.  I used the program to measure a calibration scale in a map and I also used the program to measure the area of two polygons that I drew on the map.  The length and both areas are shown in figure \ref{imageJ}.
+
+Specifically, to find the area of the two large chinampas areas near Tenoctitlan, I took a screenshot from the 1964 paper, \cite{Chinampas_1964}, and saved it in jpg format.  Then, I opened the image in the Windows-Java edition of ImageJ \cite{imageJ}.  The length of the 10 mile distance scale was 213 pixels. The long chinampas area at the south end of the lake was measured with a Polygon selection via the Mesure tool to have an area of $9940~pixel^2\approx21.9miles^2$.  The smaller region near Chalco had an area of about $1439~pixel^2\approx3.2miles^2$.  While there were undoubtably other regions devoted to chimanpas agriculture, the portion visible seems to be about $25.1miles^2$ or $16,000acres$.  
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=\columnwidth]{imageJ_analysis.jpg}
+\caption{
+Three screen captures showing chinampa areas and the calibration stick used to convert pixel-squared area into $miles^2$.  The image being analyzed is available in \cite{Chinampas_1964}.
+}
+\label{imageJ}
+\end{figure}
+
+
+
+
+
+
+
 
 
 \section*{References}
@@ -419,5 +453,14 @@ Science, May 12, 1978, New Series, Vol. 200, No. 4342 (May 12, 1978), pp. 611-61
 American Association for the Advancement of Science
 https://www.jstor.org/stable/1746929
 
+\bibitem{chinampas_wikipedia}
+\url{https://commons.wikimedia.org/wiki/File:Lake\_Texcoco\_c\_1519.png}
+Self-published work by Wikipedia user Madman2001
+
+
+\bibitem{imageJ}
+ImageJ is a free tool for measurement of photographic data.  
+\url{https://imagej.nih.gov/ij/}
+Schneider, C. A., Rasband, W. S., \& Eliceiri, K. W. (2012). NIH Image to ImageJ: 25 years of image analysis. Nature Methods, 9(7), 671–675. doi:10.1038/nmeth.2089
 \end{thebibliography}
 \end{document}
