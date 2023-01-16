@@ -144,7 +144,6 @@ The pamphlet data came from pre-war, pre-chemical agriculture, and the yields ci
 A table from a USDA booklet giving 1917 yields for various farm products.  
 }
 %The amounts listed were almost certainly produced via only animal and human power with only manure and lime available as chemical soil amendments.  Accordingly, they are probably a reasonable upper bound on what's possible in a modern ``back to the land'' backyard garden. }
-
 \label{1917_yields}
 \end{figure}
 
@@ -201,8 +200,54 @@ P \approx 38\frac{bu}{acre} &&
 
 This crop productivity is in remarkable agreement with the 1917 USDA yields, $35bu/acre$, which seems to validate the assumed 100,000 person population of Tenochtitlan.  Some references \cite{Chinampas_1964} describe an extensive tribute system that Aztec government required of it's subjects, which certainly would have been necessary to support populations on the upper end of historical estimates \cite{400k}.
 
+
+
+
 \section{Example: Was the Irish Potato Famine a Natural Disaster?}
-In contrast to cultures of the Americas, Ireland's population boomed with the introduction of the potato. \cite{potato,little_ice_age}.  
+In contrast to cultures of the Americas, Ireland's population boomed with the introduction of the potato. \cite{potato,little_ice_age}.  Figure \ref{ireland_population} shows that from about 1700 onward there was a dramatic growth in the island's population.  There's never just one reason for historical events, but potatoes, kale, and milk formed a nutritionally complete diet that greatly reduced hunger-related mortality among the poor working-class in Ireland.  If you look closely at the data in figure \ref{ireland_population} you might believe that there were \textit{two} weather and potato related famines, the most obvious 1845-49 and the second, with much smaller effect on population in 1740-1.  Both famines were precipitated by poor weather, but an important difference is that in 1740, Ireland was a sovereign state but by 1845 the island was effectively an economic colony of the British Empire \cite{little_ice_age}.  
+
+As the story goes, the two main commodity crops in Ireland were potatoes (for humans), and oats, which as horse feed, were something like gasoline in today's economy.  A sovereign government can halt the export of food to feed English horses, which is what happened in 1741 (and 1782), and the grain was diverted back to starving people in Ireland, reducing the mortality of the famine. However, by 1845, most of Irish farmland was economically controlled by foreign (English) landlords and grain traders who refused to divert oats (horse feed) for the sake of income from their investments.  
+
+This inflammatory claim, which is certainly a simplified version of history, serves as a useful evaluation example for students. Specifically, in years that the potato crop failed because of weather or late blight, could the amount of oats produced (and exported) have fed the Irish population?  More broadly, was the Great Famine due to natural causes ``we can't do anything about'' (weather and disease) or was the depth of the tragedy a result of political choices?
+
+Some estimates follow:  Ireland's population in 1845 was about 8.5 million people.  The island has an area of about $70,000km^2$ and you might estimate that $64\%$ of the land ($44,800km^2$) is arable for agriculture \cite{arable_percentage}.  
+It seems reasonable to use the 1917 productivity,  figure \ref{1917_yields},  to make calculations for Ireland in 1845.  Reminder, in 1917, potatoes produced $1.908\times10^6 kcal/acre$ and oats $1.254\times10^6kcal/acre$.
+With students, the question could be approached as a series of questions:
+
+How much food does the island need?
+\bea
+food~needed~per~year &=& 8.5\times10^6~people
+	\cdot \frac{3000}{person\cdot day }
+	\cdot \frac{365days}{year}\\
+&\approx& 9.3\times 10^{12} kcals 
+\eea       
+
+How much land area, sown in potatoes, would produce this food?
+\bea
+9.3\times10^{12}kcals /\left(1.908\times 10^6\frac{kcal}{acre}\right) &=& 4.87\times10^6 acres \\
+ &\approx& 19,700 km^2
+\eea
+
+How much land area, sown in oats, would produce this food?
+\bea
+9.3\times10^{12}kcals /\left(1.254\times10^6\frac{kcal}{acre}\right) &=& 7.41 \times10^6 acres \\
+ &\approx& 30,000 km^2
+\eea
+
+Added, $49,700km^2$, these two land areas devoted to oats and potatoes are close to the amount of arable land estimated above for Ireland in 2022 ($44,800km^2$).  What do the numbers mean?  Did there have to be a famine?  If all of the potato crop failed because of late blight, there would likely have been enough oats to feed a $2000kcal$ ratio of oats with leftover to spare.  
+Like the Holodomor or the Great Leap Forward, the numbers suggest that large-scale suffering wasn't  natural disaster, but rather a human disaster resulting from poor government policy insensitive to the value of human life.    
+
+
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=\columnwidth]{Population_of_Ireland_since_1600.png}
+\caption{
+The population of Ireland over time, file from Wikipedia \cite{pop_image}, data sources \cite{pop_sources}. The humble potato, kale, and milk were part of an amazing population boom.  Note that there were two weather-related ``potato'' famines in Ireland, in about 1740 and 1850.  government policy response to the famines could explain the drastic difference in subsequent population following each of the two famines.  The population of Ireland finally re-reached it's 1851 peak in 2021 \cite{Ireland_5M}.  
+}
+\label{ireland_population}
+\end{figure}
+
 
 \section{Conclusion}
 
@@ -503,6 +548,19 @@ Basic Books 2001
 \bibitem{Ireland_5M}
 https://www.theguardian.com/world/2021/aug/31/ireland-population-surpasses-5m-for-first-time-since-1851
 
+\bibitem{pop_image}
+\url{https://commons.wikimedia.org/wiki/File:Population\_of\_Ireland\_since\_1600.png}
+Population of the island of Ireland since 1600.
+13 January 2010 (original upload date)
+The original uploader was Rannpháirtí anaithnid (old) at English Wikipedia.
+
+\bibitem{pop_sources}
+Specific census data sources for the Ireland population plot are given at 
+\url{https://commons.wikimedia.org/wiki/File\_talk:Population\_of\_Ireland\_since\_1600.png}
+
+\bibitem{arable_percentage}
+The web suggests that $64\%$ of the land area in Ireland is currently suitable for agriculture.  Urbanization over the last 150 years has probably decreased this percentage.  
+\url{https://www.askaboutireland.ie/enfo/sustainable-living/farming-in-ireland-overvi/land-use-in-ireland/}
 
 \end{thebibliography}
 \end{document}
