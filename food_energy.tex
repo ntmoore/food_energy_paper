@@ -1,12 +1,21 @@
-% formatted for IOP
-\documentclass[12pt]{iopart}
+\documentclass[prb,preprint]{revtex4-2} 
+% The line above defines the type of LaTeX document.
+% Note that AJP uses the same style as Phys. Rev. B (prb).
+\usepackage{amsmath}  % needed for \tfrac, \bmatrix, etc.
+\usepackage{amsfonts} % needed for bold Greek, Fraktur, and blackboard bold
+\usepackage{graphicx} % needed for figures
+
+
+
+%% formatted for IOP
+%%\documentclass[12pt]{iopart}
 
 %PLOS guidelines
 %https://journals.plos.org/plosone/s/submission-guidelines
 % possible editor, Luís A. Nunes Amaral
 % ORCID Icon orcid.org/0000-0002-3762-789X
 
-\pdfminorversion=4
+%\pdfminorversion=4
 
 \usepackage{float}
 \usepackage{units}
@@ -18,19 +27,31 @@
 \newcommand{\bea}{\begin{eqnarray}}
 \newcommand{\eea}{\end{eqnarray}}
 \newcommand{\degC}{^{\circ}C}
+
 \begin{document}
-\title[How many acres of potatoes does a society need?]{How many acres of potatoes does a society need?}
-\author{N T Moore}
-\footnote{Present address:
-Department of Physics, Winona State University, Winona, MN 55987, USA}
-\ead{nmoore@winona.edu}
+
+\title{How many acres of potatoes does a society need?} 
+
+% AJP header
+%When submitting the manuscript for review, do not include the author's name or institution
+\author{Nathan T. Moore}
+\email{nmoore@winona.edu}
+\affiliation{Physics and General Engineering, Winona State University, Winona, MN 55987}
+
+%IOP header
+%%\title[How many acres of potatoes does a society need?]{How many acres of potatoes does a society need?}
+%%\author{N T Moore}
+%%\footnote{Present address:
+%%Department of Physics, Winona State University, Winona, MN 55987, USA}
+%%\ead{nmoore@winona.edu}
 \date{\today}
+
 \begin{abstract}
 One of the main difficulties in a class on Sources of Energy and Social Policy is the wide variety of units used by different technologists (BTU's, Barrels of oil, Quads, kWh, etc).  As every student eats, I think some of this confusion can be resolved by starting and grounding the class with a discussion of food and food production.  A general outline for this introduction is provided and two interesting historical cultural examples, Tenochtitlan and the Irish Potato Famine, are provided.  
 Science and Social Policy classes are full of bespoke units and involve many different contexts.  Starting the class with a discussion of food energy is a nice way for everyone to start with the same context.  In addition, discussion of Food Energy can lead to interesting historical claims. 
 \end{abstract}
-\noindent{\it Keywords\/}: Energy, Social Policy, kcals, Tenochtitlan, Irish Potato Famine, History, self-reliance
-%\submitto{\PED}
+%\noindent{\it Keywords\/}: Energy, Social Policy, kcals, Tenochtitlan, Irish Potato Famine, History, self-reliance
+%%\submitto{\PED}
 \maketitle
 
 \section{Introduction}
@@ -255,13 +276,15 @@ A class about Energy and Social Policy and the author hasn't mentioned climate c
 How many tons of carbon does your car release in a year? How many shiploads of iron oxide will we have to dump into the ocean for phytoplankton to eat up the equivalent about of carbon?  Every question in a class like this is, to at least some extent, informed by numerical calculation and it is pretty arrogant to assume that ``those students'' don't need to (or can't) do the math.  If you're going to have success talking about numerical calculations, you might as well start with examples that everyone can relate to, and everyone eats!  Along the way you might find fascinating historical questions to investigate.   
 
 
-\ack
+%%\ack
+\begin{acknowledgments}
 The work was influenced and improved by discussions with 
 Diane Dahle-Koch, 
 John Deming, 
 Carl Ferkinhoff, 
 Larry Moore, 
 and Sarah Taber.
+\end{acknowledgments}
 
 \clearpage
 \appendix
@@ -287,25 +310,30 @@ In 2022 the USDA reported an average production of $172.3$ bushels of corn per a
 Obviously the result is only reasonable to two significant figures!
 
 \begin{table}
-\caption{\label{label}
+\centering
+\caption{
 A summary of units and conversions used to create figure \ref{ag_yields} from USDA NASS data.  $1cwt$ is a hundred pounds of potatoes.  
 A bushel, $1bu$, is a volume unit of about 35liters and corresponds to about 60lbs of grain. Calorie content per 100 gram (mass) of food is taken from the USDA's ``Food Data Central'' database. 
 For context, typical serving sizes are included. 
 It isn't clear from any of these resources if lb is pound-force (lbf) or pound-mass (lbm) and so I am treating them as ``grocery store units'' where $1 lbs \approx 453.6 grams$.
 }
-\begin{indented}
-\item[]\begin{tabular}{@{}llllll}
-\br
+%%\begin{indented}
+%%\item[]\begin{tabular}{@{}llllll}
+\begin{ruledtabular}
+%%\begin{tabular}{@{}llllll}\br
+\begin{tabular}{l l l l l l}
 Crop&per acre unit&production unit&kcals per 100gram & typical portion &FDC ID\\
-\mr
+%%\mr
+\hline
 Corn & bu/acre & $1bu=56lbs$ & 365 & 1 cup is 166g &170288 \\
 Potatoes & cwt/acre & $1CWT=100lbs$ & 77 & 0.5 cup is 75g & 170026 \\
 Soybeans & bu/acre & $1bu=60lbs$ & 446 & 1 cup is 186g &174270 \\
 Sunflowers & lbs/acre & & 584 & 1 cup is 140g & 170562 \\
 Wheat & bu/acre & $1bu=60lbs$ & 327 &  1 cup is 192g & 168890 \\
-\br
+%\br
 \end{tabular}
-\end{indented}
+\end{ruledtabular}
+%%\end{indented}
 \label{conversions}
 \end{table}
 
@@ -346,6 +374,7 @@ Three screen captures showing chinampa areas and the calibration stick used to c
 
 
 \clearpage
+
 \section*{References}
 \begin{thebibliography}{99}
 
@@ -665,4 +694,333 @@ Available from: \url{https://fdc.nal.usda.gov/fdc-app.html}.
 
 
 \end{thebibliography}
+
+
+
+
+
+
+
+%%formatted for IOP, PLOS
+%\section*{References}
+%\begin{thebibliography}{99}
+%
+%\bibitem{Energy_textbook}
+%Kraushaar JJ, Ristinen RA, Brack JT.
+%Energy and the Environment. 4th edition.
+%%Jack J. Kraushaar , Robert A. Ristinen , Jeffrey T. Brack
+%Wiley; 2022.
+%
+%\bibitem{PFFP}
+%Muller RA.
+%Physics and Technology for Future Presidents: An Introduction to the Essential Physics Every World Leader Needs to Know
+%%Richard A. Muller
+%Princeton University Press; 2010.
+%
+%\bibitem{meat_sweats}
+%%https://www.bonappetit.com/story/meat-sweats
+%Trayhurn P.
+%Thermogenesis.
+%In: Caballero B, editor.
+%%THERMOGENESIS,
+%%Editor(s): Benjamin Caballero,
+%Encyclopedia of Food Sciences and Nutrition. 2nd ed.
+%% (Second Edition),
+%Academic Press;
+%2003.
+%pp. 5762-7.
+%%ISBN 9780122270550,
+%%https://doi.org/10.1016/B0-12-227055-X/01188-3.
+%%(https://www.sciencedirect.com/science/article/pii/B012227055X011883)
+%
+%\bibitem{trout}
+%The wilderness river might be full of trout, but if they're $300kcals$ each, you'll have to catch, clean, and smoke $10$ of them to store up a day's food.
+%U.S. Department of Agriculture Agricultural Research Service [Internet].
+%FoodData Central: Fish, trout, rainbow, wild, raw.
+%[updated 2019 Apr 1, cited 2023 Jan 16]; [about 3 screens].
+%Available from: \url{https://fdc.nal.usda.gov/fdc-app.html#/food-details/175154/nutrients}
+%
+%\bibitem{fat_bear}
+%Some sources claim that bear metabolism can vary between $4,000$ to $20,000$ kcals per day, 
+%North American Bear Center [Internet]. 
+%Ely, MN, USA 2023. 
+%5 Stages of Activity and Hibernation.
+%[cited 2023 Jan 16]; [about 2 screens].
+%Available from: \url{https://bear.org/5-stages-of-activity-and-hibernation/}.
+%%
+%This is comically illustrated by the National Park Service at 
+%National Park Service, Katmai National Park and Preserve Alaska [Internet].
+%Fat Bear Week 2022.
+%[updated 2022 Oct 11, cited 2023 Jan 16]; [about 5 screens].
+%Available from: \url{https://www.nps.gov/katm/learn/fat-bear-week-2022.htm} .
+%
+%
+%\bibitem{brown_fat_1}
+%Cohen P, Spiegelman BM.
+%Brown and beige fat: molecular parts of a thermogenic machine.
+%%Paul Cohen1 and Bruce M. Spiegelman2
+%Diabetes.
+%2015;
+%64:2346–51
+%% | DOI: 10.2337/db15-0318
+%
+%\bibitem{brown_fat_2}
+%%https://pubmed.ncbi.nlm.nih.gov/33846638/
+%Shamsi F, Piper M, Ho LL, Huang TL, Gupta A, Streets A, Lynes MD, Tseng YH. 
+%Vascular smooth muscle-derived Trpv1+ progenitors are a source of cold-induced thermogenic adipocytes. 
+%Nat Metab. 
+%2021 Apr;3(4):485-95.
+%%doi: 10.1038/s42255-021-00373-z. Epub 2021 Apr 12. PMID: 33846638; PMCID: PMC8076094.
+%
+%\bibitem{brown_fat_3}
+%%https://pubmed.ncbi.nlm.nih.gov/14715917/
+%Cannon B, Brown NJ. 
+%Adipose tissue: function and physiological significance.
+%Physiol Rev. 
+%2004 Jan;
+%84(1):277-359. 
+%%doi: 10.1152/physrev.00015.2003. PMID: 14715917.
+%
+%\bibitem{brown_fat_4}
+%%https://pubmed.ncbi.nlm.nih.gov/6722594/
+%Himms-Hagen J. 
+%Nonshivering thermogenesis. 
+%Brain Res Bull. 
+%1984 Feb;
+%12(2):151-60. 
+%%doi: 10.1016/0361-9230(84)90183-7. PMID: 6722594.
+%%https://www.nih.gov/news-events/nih-research-matters/uncovering-origins-brown-fat
+%
+%\bibitem{finland_lumberjacks}
+%Huttunen P, Hirvonen J, Kinnula V. 
+%The occurrence of brown adipose tissue in outdoor workers. 
+%Eur J Appl Physiol Occup Physiol. 
+%1981;
+%46(4):339-45. 
+%%doi: 10.1007/BF00422121. PMID: 6266825.
+%
+%\bibitem{METS}
+%Jetté M, Sidney K, Blümchen G. 
+%Metabolic equivalents (METS) in exercise testing, exercise prescription, and evaluation of functional capacity. 
+%Clin Cardiol. 
+%1990 Aug;
+%13(8):555-65. 
+%%doi: 10.1002/clc.4960130809. PMID: 2204507.
+%
+%\bibitem{energy_bar_charts}
+%Brewe E.
+%Energy as a substancelike quantity that flows: Theoretical considerations
+%and pedagogical consequences.
+%%Eric Brewe
+%Phys. Rev. Phys. Edu. Res.
+%%PHYSICAL REVIEW SPECIAL TOPICS - PHYSICS EDUCATION RESEARCH 
+%2011; 
+%7, 020106.
+%%https://journals.aps.org/prper/abstract/10.1103/PhysRevSTPER.7.020106
+%
+%\bibitem{homesteading}
+%See for example, the Discover television show, ``Alaska the Last Frontier,'' any issue of ``Mother Earth News,'' or Backyard Chicken feeds on Instagram.  
+% 
+% 
+% \bibitem{Haspel}
+%Haspel T.
+%In defense of corn, the world’s most important food crop.
+%The Washington Post [Internet].
+%%Tamar Haspel 
+%2015 July 12 [cited 2023 Jan 16].
+%Available from \url{https://www.washingtonpost.com/lifestyle/food/in-defense-of-corn-the-worlds-most-important-food-crop/2015/07/12/78d86530-25a8-11e5-b77f-eb13a215f593_story.html}
+%
+%\bibitem{backyard_homestead}
+%Madigan C. 
+%The Backyard Homestead: Produce all the food you need on just a quarter acre!
+%%Carleen Madigan
+%Storey Publishing; 
+%2009.
+%
+%
+%
+%\bibitem{USDA_1917_yields_pamphlet}
+%Cooper MO, Spillman WJ.
+%Human Food from an Acre of Staple Farm Products.
+%%Morton O. Cooper and W.J. Spillman
+%Government Printing Office, United States Department of Agriculture
+%October 1917.
+%11 p.
+%Farmers' Bulletin 877.
+%
+%
+%\bibitem{math_encounters}
+%
+%Math Encounters Blog [Internet].
+%Mark Biegert, 2022.
+%Calorie Per Acre Improvements in Staple Crops Over Time;
+%2017 Jan 4: [cited 2023 Jan 16]; [about 5 screens].
+%Available from: \url{https://www.mathscinotes.com/2017/01/calorie-per-acre-improvements-in-staple-crops-over-time/}
+%
+%
+%
+%\bibitem{energetic_cost_of_moving}
+%See the family groupings in figure 2 of 
+%Tucker VA.
+%The Energetic Cost of Moving About.
+%American Scientist.
+%1975; 
+%63: 413-9.
+%
+%\bibitem{calorie_age} 
+%Is $3000\frac{kcal}{person\cdot day}$ accurate for a family?  For soldiers or active athletes it is, but $2000kcal$ is the USDA reference for an ``average adult,'' e.g. the author, in his 40's, and   $1000-1200kcal$ for a senior age ($>60$) female.  However, weeding the garden all day is physically taxing, mice will probably eat some of the potatoes, and $3000$ is a nice round number, so that's what I'm using.
+%
+%\bibitem{Deppe}
+%Carol Deppe.
+%The 20 Potato a Day Diet versus the Nearly All Potato Winter [Internet].
+%[cited 2023 Jan 16]; [about 5 screens].
+%Available from: 
+%\url{https://www.caroldeppe.com/The\%2020\%20Potato\%20a\%20Day\%20Diet.html}
+%
+%
+%\bibitem{organic_corn_yield}
+%%This is an old article 
+%%1998%
+%Delate K, Cambardella C, Burcham B.
+%Comparison of Organic and Conventional Corn, 
+%Soybean, Alfalfa, Oats, And Rye Crops at the Neely Kinyon Long-Term Agroecological Research (LTAR) Site.
+%1998.
+%Available from: \url{http://extension.agron.iastate.edu/organicag/researchreports/n-kltar98.pdf} 
+%%Dr. Kathleen Delate, assistant professor, Depts. of Horticulture \& Agronomy 
+%%Dr. Cynthia Cambardella, soil scientist, USDA National Soil Tilth Lab 
+%%Bob Burcham, farm superintendent, Neely-Kinyon Research and Demonstration Farm
+%
+%\bibitem{national_geo}
+%Borunda A, Rodriguez C.
+%In Mexico City, the pandemic revived Aztec-era island farms.
+%National Geographic [Internet].
+%2022 Jun 30.
+%Available from \url{https://www.nationalgeographic.com/magazine/article/in-mexico-city-the-pandemic-revived-aztec-era-island-farms}
+%%ALEJANDRA BORUNDA A
+%%CÉSAR RODRÍGUEZ C
+%
+%\bibitem{HortTech_2019}
+%Ebel R.
+%Chinampas: An Urban Farming Model of the Aztecs and a Potential Solution for Modern Megalopolis.
+%HortTechnology.
+%%Roland Ebel
+%%Volume/Issue: Volume 30: Issue 1
+%2019; 
+%30(1): 13-19
+%%DOI: https://doi.org/10.21273/HORTTECH04310-19
+%
+%\bibitem{Chinampas_1964}
+%Coe MD
+%The chinampas of Mexico.
+%%THE CHINAMPAS OF MEXICO
+%%Author(s): Michael D. Coe
+%Scientific American.
+%1964 July; 211(1):90-9.
+%%Source: Scientific American , Vol. 211, No. 1 (July 1964), pp. 90-99
+%%Published by: Scientific American, a division of Nature America, Inc.
+%%Stable URL: https://www.jstor.org/stable/10.2307/24931564
+%
+%\bibitem{google_earth}
+%Chinampas are still visible in sattelite imagery.  See for example latitude = 19.268, longitude -99.087
+%
+%\bibitem{40k}
+%%Susan Toby Evans. 
+%Evans ST.
+%Ancient Mexico and Central America: Archaeology and Culture History. 
+%Thames \& Hudson; 
+%2013. 
+%p 549.
+%
+%\bibitem{400k}
+%Britannica [Internet].
+%Tenochtitlán;
+%[updated 2022 Dec 23; cited 16 January 2023]; [about 1 screen].
+%Available from: \url{https://www.britannica.com/place/Tenochtitlan}
+%
+%\bibitem{Aztec_Cannibalism} 
+%Ortiz de Montellano BR.
+%Aztec Cannibalism: An Ecological Necessity?
+%%Bernard R. Ortiz de Montellano
+%Science.
+%1978 May 12; 
+%200(4342):611-7.
+%%American Association for the Advancement of Science
+%%https://www.jstor.org/stable/1746929
+%
+%\bibitem{chinampas_wikipedia}
+%Wikimedia Commons, the free media repository [Internet].
+%File:Lake Texcoco c 1519.png;
+%[updated 2016 Aug 17; cited 2023 Jan 16]; [about 1 screen].
+%Available from: \url{https://commons.wikimedia.org/wiki/File:Lake\_Texcoco\_c\_1519.png}
+%%Self-published work by Wikipedia user Madman2001
+%
+%
+%\bibitem{imageJ}
+%ImageJ is a free tool for measurement of photographic data.  
+%\url{https://imagej.nih.gov/ij/}
+%Schneider, C. A., Rasband, W. S., Eliceiri, K. W. 
+%NIH Image to ImageJ: 25 years of image analysis. 
+%Nature Methods.
+%2012; 
+%9(7):671-5. 
+%%doi:10.1038/nmeth.2089
+%
+%\bibitem{potato}
+%Salaman RN, Hawkes JG.
+%The History and Social Influence of the Potato
+%%Redcliffe N. Salaman  (Author), J. G. Hawkes (Editor)
+%Cambridge University Press; 
+%1985.
+%
+%\bibitem{little_ice_age}
+%Fagan B.
+%The Little Ice Age: How Climate Made History 1300-1850
+%%Brian Fagan
+%Basic Books 
+%2001.
+%
+%\bibitem{IRE_area}
+%Currently, Northern Ireland and the Republic of Ireland are separate countries.  Together, their land area is about $84,400km^2$.
+%
+%\bibitem{Ireland_5M}
+%Carroll R.
+%Ireland’s population passes 5m for first time since C19th famine.
+%The Guardian [Internet].
+%2021 Aug 31 [cited 2023 Jan 16].
+%%Tue 31 Aug 2021 10.19 EDT
+%%© 2023 Guardian News & Media Limited or its affiliated companies. 
+%Available from: \url{https://www.theguardian.com/world/2021/aug/31/ireland-population-surpasses-5m-for-first-time-since-1851}
+%
+%\bibitem{pop_image}
+%Wikimedia Commons, the free media repository [Internet].
+%File:Population of the island of Ireland since 1600.png;
+%[updated 2010 Jan 13; cited 2023 Jan 16]; [about 1 screen].
+%Available from: \url{https://commons.wikimedia.org/wiki/File:Population\_of\_Ireland\_since\_1600.png}
+%
+%\bibitem{pop_sources}
+%Specific census data sources for the Ireland population plot are given at the ``talk'' page of \cite{pop_image}, specifically
+%\url{https://commons.wikimedia.org/wiki/File\_talk:Population\_of\_Ireland\_since\_1600.png}
+%
+%\bibitem{arable_percentage}
+%The web suggests that $64\%$ of the land area in Ireland is currently suitable for agriculture.  Urbanization over the last 150 years has probably decreased this percentage.  
+%Ask about Ireland [Internet].
+%Land Use in Ireland; [cited 2023 Jan 16]; [about 2 screens].
+%Available from: \url{https://www.askaboutireland.ie/enfo/sustainable-living/farming-in-ireland-overvi/land-use-in-ireland/}
+%
+%\bibitem{USDA_NASS}
+%United States Department of Agriculture National Agricultural Statistics Service [Internet].
+%Statistics by Subject; 
+%[updated 2020 Oct 13; cited 2023 Jan 18]; [about 1 screen].
+%Available from: \url{https://www.nass.usda.gov/Statistics_by_Subject/index.php?sector=CROPS}.  
+%
+%\bibitem{USDA_FDC}
+%United States Department of Agriculture Agricultural Research Service [Internet].
+%FoodData Central; 
+%[cited 2023 Jan 18]; [about 1 screen].
+%Available from: \url{https://fdc.nal.usda.gov/fdc-app.html}.  
+%
+%
+%\end{thebibliography}
+
+
 \end{document}
