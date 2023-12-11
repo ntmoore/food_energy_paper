@@ -48,38 +48,41 @@ Where will those Calories come from? Is your backyard enough to homestead in the
 
 At some point between 1920 and 1950, US chemical manufacturers realized that in the post-war period, they could repurpose processes developed for manufacturing munitions and chemical warfare agents to produce chemicals that would kill insects and increase the nitrogen levels in the soil. As figures \ref{corn_and_potato_yields} and \ref{ag_yields} show, the epoch of ``Better Living Through Chemistry'' produced a dramatic increase in per-acre yields across all commodity food crops, particularly corn and potatoes.  
 
-\begin{figure}[ht!]
-\centering
-\includegraphics[width=\columnwidth]{corn_potatoes_raw_production_per_acre.pdf}
-\caption{
-USDA per acre Corn and Potato production figures, plotted over time.  Data is given in harvest units, $56lbs$ bushels per acre for field corn and hundred-weight (CWT) for potatoes.  By mass, corn is about $4.5$ times more calorie dense than potato which results in a nearly equal $kcal/acre$ values for both crops in figure \ref{ag_yields}.
-Details on the data source and conversions are given in \ref{how_yield_plot_is_made}.
-}
-\label{corn_and_potato_yields}
-\end{figure}
+corn-potatoes-raw-production-per-acre.pdf
+%\begin{figure}[ht!]
+%\centering
+%\includegraphics[width=\columnwidth]{corn_potatoes_raw_production_per_acre.pdf}
+%\caption{
+%USDA per acre Corn and Potato production figures, plotted over time.  Data is given in harvest units, $56lbs$ bushels per acre for field corn and hundred-weight (CWT) for potatoes.  By mass, corn is about $4.5$ times more calorie dense than potato which results in a nearly equal $kcal/acre$ values for both crops in figure \ref{ag_yields}.
+%Details on the data source and conversions are given in \ref{how_yield_plot_is_made}.
+%}
+%\label{corn_and_potato_yields}
+%\end{figure}
 
-\begin{figure}[ht!]
-\centering
-\includegraphics[width=\columnwidth]{kcal_per_acre_yields.pdf}
-\caption{
-USDA per acre crop production figures, plotted over time.  Production data is scaled by estimated dietary kcal content to show that, over all crops, there has been a dramatic increase in kcal production since about 1940.  
-Details of the data source and conversions are given in \ref{how_yield_plot_is_made}.
-The idea for this plot came from an online blog. \cite{math_encounters}
-It would be interesting to know if there are patterns of scaling among vegetable families (grains, legumes, tubers, etc) in the same way that there are family classifications for the minimal energy required for transport. \cite{energetic_cost_of_moving}
-}
-\label{ag_yields}
-\end{figure}
+kcal-per-acre-yields.pdf
+%\begin{figure}[ht!]
+%\centering
+%\includegraphics[width=\columnwidth]{kcal_per_acre_yields.pdf}
+%\caption{
+%USDA per acre crop production figures, plotted over time.  Production data is scaled by estimated dietary kcal content to show that, over all crops, there has been a dramatic increase in kcal production since about 1940.  
+%Details of the data source and conversions are given in \ref{how_yield_plot_is_made}.
+%The idea for this plot came from an online blog. \cite{math_encounters}
+%It would be interesting to know if there are patterns of scaling among vegetable families (grains, legumes, tubers, etc) in the same way that there are family classifications for the minimal energy required for transport. \cite{energetic_cost_of_moving}
+%}
+%\label{ag_yields}
+%\end{figure}
 
 However, if you're discussing backyard Calorie production it isn't reasonable to use modern yield estimates for planning.  ``Roundup Ready'' Corn, Soybean, and Sugar Beet seeds are not readily available to the public, nobody wants to put on a respirator to apply Atrazine ten feet from the back door,  and the edge effects from deer and insects are much smaller on a $600$ acre field than they are in an community garden allotment.  In 1917 the USDA published a pamphlet \cite{USDA_1917_yields_pamphlet} giving detailed per acre Calorie estimates a farmer might expect from a given crop.  An excerpt from this pamphlet is shown in Figure \ref{1917_yields}.  
 The pamphlet data came from pre-war, pre-chemical agriculture, and the yields cited were produced with horses, manure, lime, and large families full of children.  If you want to be self sufficient, these yield numbers are probably a good upper bound on what's realistically possible.  
 
-\begin{figure}[ht!]
-\centering
-\includegraphics[width=\columnwidth]{USDA_1917_cropped.pdf}
-\caption{
-A table from a USDA booklet giving 1917 yields for various farm products.  The amounts listed were almost certainly produced via only animal and human power with only manure and lime available as chemical soil amendments.  Accordingly, they are probably a reasonable upper bound on what's possible in a modern ``homesteading'' backyard garden. }
-\label{1917_yields}
-\end{figure}
+USDA-1917-cropped.pdf
+%\begin{figure}[ht!]
+%\centering
+%\includegraphics[width=\columnwidth]{USDA_1917_cropped.pdf}
+%\caption{
+%A table from a USDA booklet giving 1917 yields for various farm products.  The amounts listed were almost certainly produced via only animal and human power with only manure and lime available as chemical soil amendments.  Accordingly, they are probably a reasonable upper bound on what's possible in a modern ``homesteading'' backyard garden. }
+%\label{1917_yields}
+%\end{figure}
 
 Using this data and assuming a family of 4 requires $3000kcal/person$ each day, we can sketch out the land area needed for suburban self-sufficiency.\footnote{
 Is $3000\frac{kcal}{person\cdot day}$ accurate for a family?  For soldiers or active athletes it is, but $2000kcal$ is the USDA reference for an ``average adult,'' e.g. the author, in his 40's, and   $1000-1200kcal$ for a senior age ($>60$) female.  However, weeding the garden all day is physically taxing, mice will probably eat some of the potatoes, and $3000$ is a nice round number, so that's what I'm using.
@@ -134,16 +137,17 @@ P \approx 38\frac{bu}{acre} . &&
 
 This crop productivity is in remarkable agreement with the 1917 USDA yields, $35bu/acre$, which seems to validate the assumed $100,000$ person population of Tenochtitlan.  Some references \cite{Chinampas_1964} describe an extensive tribute system that Aztec government required of its subjects, which certainly would have been necessary to support populations on the upper end of historical estimates. \cite{400k}
 
-\begin{figure}[ht!]
-\centering
-\includegraphics[width=\columnwidth]{imageJ_analysis.jpg}
-\caption{
-I used ImageJ, a free software program developed by the National Institutes of Health for photo analysis \cite{imageJ} to measure a calibration scale in a map and the area of two polygons that I drew on the map.   
-While there were certainly other regions devoted to chimanpas agriculture, after unit conversions, the portion visible near the Aztec capital seems to be about $25.1miles^2$ or $16,000acres$. 
-The image being analyzed is available online. \cite{Chinampas_1964}
-}
-\label{imageJ}
-\end{figure}
+imageJ-analysis.jpg
+%\begin{figure}[ht!]
+%\centering
+%\includegraphics[width=\columnwidth]{imageJ_analysis.jpg}
+%\caption{
+%I used ImageJ, a free software program developed by the National Institutes of Health for photo analysis \cite{imageJ} to measure a calibration scale in a map and the area of two polygons that I drew on the map.   
+%While there were certainly other regions devoted to chimanpas agriculture, after unit conversions, the portion visible near the Aztec capital seems to be about $25.1miles^2$ or $16,000acres$. 
+%The image being analyzed is available online. \cite{Chinampas_1964}
+%}
+%\label{imageJ}
+%\end{figure}
 
 \clearpage
 \newpage
@@ -188,16 +192,16 @@ What do the numbers mean?  Did there have to be a famine?  If all of the potato 
 Like the Holodomor or the Great Leap Forward, the numbers suggest that large-scale suffering wasn't  a natural disaster, but rather a human disaster resulting from malicious government policy insensitive to the value of human life.    
 
 
-
-\begin{figure}[ht!]
-\centering
-\includegraphics[width=\columnwidth]{Population_of_Ireland_since_1600.png}
-\caption{
-The population of Ireland over time, file from Wikipedia. (File:Population of the island of Ireland since 1600.png, 2010)
-The humble potato, kale, and milk were part of an amazing population boom.  Note that there were two weather-related ``potato'' famines in Ireland, in about 1740 and 1850.  Government policy response to the famines could explain the drastic difference in subsequent population following each of the two famines.  The population of Ireland finally re-reached its 1851 peak in 2021. \cite{Ireland_5M}
-}
-\label{ireland_population}
-\end{figure}
+Population-of-Ireland-since-1600.png
+%\begin{figure}[ht!]
+%\centering
+%\includegraphics[width=\columnwidth]{Population_of_Ireland_since_1600.png}
+%\caption{
+%The population of Ireland over time, file from Wikipedia. (File:Population of the island of Ireland since 1600.png, 2010)
+%The humble potato, kale, and milk were part of an amazing population boom.  Note that there were two weather-related ``potato'' famines in Ireland, in about 1740 and 1850.  Government policy response to the famines could explain the drastic difference in subsequent population following each of the two famines.  The population of Ireland finally re-reached its 1851 peak in 2021. \cite{Ireland_5M}
+%}
+%\label{ireland_population}
+%\end{figure}
 
 
 \section{Conclusion}
@@ -227,15 +231,16 @@ and Sarah Taber.
 
 To introduce Food Energy, I ask the students to work through a few questions:
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=\columnwidth]{at_the_buffet.jpg}
-\caption{
-A proto-college-student at 
-Winona's China King Buffet, dreaming about visiting the steam tables every day. 
-}
-\label{buffet}
-\end{figure}
+at-the-buffet.jpg
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=\columnwidth]{at_the_buffet.jpg}
+%\caption{
+%A proto-college-student at 
+%Winona's China King Buffet, dreaming about visiting the steam tables every day. 
+%}
+%\label{buffet}
+%\end{figure}
 
 \subsection{Converting food into body heat}
 Planning to save money, one college student decides to go to an all-you-can-eat buffet each day at 11am, eg figure \ref{buffet}.  If he brings homework and stretches the meal out for a few hours he can get all $3000kcals$ with only one bill.  Food is fuel for the human body -- could too much fuel make his body feel sick? If his body burned all this food at once, how much warmer would he get? 
@@ -279,13 +284,14 @@ Imagine that after eating a $600kcal$ bacon-maple long-john (donut), you decide 
 Winona State  is in a river valley bounded by $200m$ tall bluffs.  How high up the bluff would you have to hike to burn off the donut?  
 Useful information: human muscle is about $1/3$ efficient, and on Earth's surface, gravitational energy has a slope of about $10~\frac{Joules}{kg\cdot m}$.
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=\columnwidth]{bar_chart.png}
-\caption{An Energy Bar Chart to illustrate the $1/3$ efficient student hiking up a bluff to burn off the morning's donut.  The initial state (left) is the hiker at the bottom of the hill, with donut in stomach.  The final state (right) is the hiker at the top of the bluff with $2/3$ of the energy removed to the atmosphere by sweat and exhalation of warm air. $1/3$ of the donut's energy is stored in elevation.  The system for this diagram includes the earth, the hiker, and the donut.  The system does not include the atmosphere around the hiker.  
-}
-\label{bar_chart}
-\end{figure}
+bar-chart.png
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=\columnwidth]{bar_chart.png}
+%\caption{An Energy Bar Chart to illustrate the $1/3$ efficient student hiking up a bluff to burn off the morning's donut.  The initial state (left) is the hiker at the bottom of the hill, with donut in stomach.  The final state (right) is the hiker at the top of the bluff with $2/3$ of the energy removed to the atmosphere by sweat and exhalation of warm air. $1/3$ of the donut's energy is stored in elevation.  The system for this diagram includes the earth, the hiker, and the donut.  The system does not include the atmosphere around the hiker.  
+%}
+%\label{bar_chart}
+%\end{figure}
 
 One way to approach this problem is by using Energy Bar Charts \cite{energy_bar_charts} to illustrate how the energy held in food changes form as it is used.  An approximation for this question is shown in figure \ref{bar_chart}.  
 In this story, the ``system'' is taken to be the earth, food, and hiker.  The hiker's body is assumed to be $1/3$ efficient, which means one of the food energy blocks of energy is transformed into gravitational energy (elevation) at the end of the hike.  
@@ -353,15 +359,15 @@ Wheat & bu/acre & $1bu=60lbs$ & 327 &  1 cup is 192g & 168890 \\
 \end{table}
 
 Raw data from the USDA NASS is plotted in figure \ref{raw_production_per_acre}.  The scaling described in equation \ref{example_calculation} produces figure \ref{ag_yields} earlier in the paper.
-\begin{figure}[ht!]
-\centering
-\includegraphics[width=\columnwidth]{raw_production_per_acre.pdf}
-\caption{
-Average USDA per acre yields for a number of commodity crops over time.  This ``raw'' data (in custom harvest units) was scaled to produce the data in figure \ref{ag_yields} earlier in the paper. 
-}
-\label{raw_production_per_acre}
-\end{figure}
-
+%\begin{figure}[ht!]
+%\centering
+%\includegraphics[width=\columnwidth]{raw_production_per_acre.pdf}
+%\caption{
+%Average USDA per acre yields for a number of commodity crops over time.  This ``raw'' data (in custom harvest units) was scaled to produce the data in figure \ref{ag_yields} earlier in the paper. 
+%}
+%\label{raw_production_per_acre}
+%\end{figure}
+raw-production-per-acre.pdf
 
 \clearpage
 \newpage
@@ -373,14 +379,15 @@ ImageJ is a free software program developed by the National Institutes of Health
 
 Specifically, to find the area of the two large chinampas areas near Tenochtitlan, I took a screenshot from the 1964 paper,\cite{Chinampas_1964} and saved it in jpg format.  Then, I opened the image in the Windows-Java edition of ImageJ.\cite{imageJ}  The length of the 10 mile distance scale was 213 pixels. The long chinampas area at the south end of the lake was measured with a Polygon selection via the Measure tool to have an area of $9940~pixel^2\approx21.9miles^2$.  The smaller region near Chalco had an area of about $1439~pixel^2\approx3.2miles^2$.  While there were certainly other regions devoted to chimanpas agriculture, the portion visible near the Aztec capital seems to be about $25.1miles^2$ or $16,000acres$.  
 
-\begin{figure}[ht!]
-\centering
-\includegraphics[width=\columnwidth]{imageJ_analysis.jpg}
-\caption{
-Three screen captures showing chinampa areas and the calibration stick used to convert pixel-squared area into $miles^2$.  The image being analyzed is available online. \cite{Chinampas_1964}
-}
-\label{imageJ}
-\end{figure}
+imageJ-analysis.jpg
+%\begin{figure}[ht!]
+%\centering
+%\includegraphics[width=\columnwidth]{imageJ_analysis.jpg}
+%\caption{
+%Three screen captures showing chinampa areas and the calibration stick used to convert pixel-squared area into $miles^2$.  The image being analyzed is available online. \cite{Chinampas_1964}
+%}
+%\label{imageJ}
+%\end{figure}
 
 
 
